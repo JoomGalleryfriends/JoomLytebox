@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="plugin" group="joomgallery" version="3.0" method="upgrade">
+	<name>plg_joomgallery_joomlytebox</name>
+	<creationDate>12.04.2013</creationDate>
+	<author>JoomGallery::Project Team</author>
+  <authorEmail>team@joomgallery.net</authorEmail>  
+	<authorUrl>www.joomgallery.net</authorUrl>
+	<copyright>(C) 2013 JoomGallery::Project Team</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<version>3.0</version>
+	<description>PLG_JOOMGALLERY_JOOMLYTEBOX_DESC</description>
+	<files>
+		<filename plugin="joomlytebox">joomlytebox.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<media destination="plg_joomgallery_joomlytebox" folder="media">
+    <filename>index.html</filename>
+    <filename>lytebox.css</filename>
+    <filename>lytebox.js</filename>
+    <folder>images</folder>
+	</media>
+  <languages>
+    <language tag="en-GB">language/en-GB/en-GB.plg_joomgallery_joomlytebox.ini</language>
+    <language tag="en-GB">language/en-GB/en-GB.plg_joomgallery_joomlytebox.sys.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_joomgallery_joomlytebox.ini</language>
+    <language tag="de-DE">language/de-DE/de-DE.plg_joomgallery_joomlytebox.sys.ini</language>
+    <language tag="it-IT">language/it-IT/it-IT.plg_joomgallery_joomlytebox.ini</language>
+    <language tag="it-IT">language/it-IT/it-IT.plg_joomgallery_joomlytebox.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+          <field name="cfg_operationmode" type="list" default="0" label="PLG_JOOMGALLERY_JOOMLYTEBOX_OPERATIONMODE_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_OPERATIONMODE_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMLYTEBOX_OPERATIONMODE_STANDARD_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMLYTEBOX_OPERATIONMODE_SLIDESHOW_LBL</option>
+          </field>
+          <field name="cfg_resizespeed" type="integer" default="5" first="1" last="10" step="1" label="PLG_JOOMGALLERY_JOOMLYTEBOX_RESIZESPEED_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_RESIZESPEED_DESC" />
+      </fieldset>
+      <fieldset name="PLG_JOOMGALLERY_JOOMLYTEBOX_STYLING_PARAMETER_LBL" label="PLG_JOOMGALLERY_JOOMLYTEBOX_STYLING_PARAMETER_LBL">
+          <field name="cfg_theme" type="list" default="black" label="PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_DESC">
+            <option value="black">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_BLACK_LBL</option>
+            <option value="grey">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_GREY_LBL</option>
+            <option value="red">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_RED_LBL</option>
+            <option value="green">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_GREEN_LBL</option>
+            <option value="blue">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_BLUE_LBL</option>
+            <option value="gold">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_GOLD_LBL</option>
+            <option value="orange">PLG_JOOMGALLERY_JOOMLYTEBOX_THEME_ORANGE_LBL</option>
+          </field>
+          <field name="cfg_navbarpos" type="list" default="1" label="PLG_JOOMGALLERY_JOOMLYTEBOX_NAVBARPOS_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_NAVBARPOS_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMLYTEBOX_TOP_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMLYTEBOX_BOTTOM_LBL</option>
+          </field>
+          <field name="cfg_titlepos" type="list" default="1" label="PLG_JOOMGALLERY_JOOMLYTEBOX_TITLEPOS_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_TITLEPOS_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMLYTEBOX_TOP_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMLYTEBOX_BOTTOM_LBL</option>
+          </field>
+          <field name="cfg_navtype" type="list" default="3" label="PLG_JOOMGALLERY_JOOMLYTEBOX_NAVTYPE_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_NAVTYPE_DESC">
+            <option value="1">PLG_JOOMGALLERY_JOOMLYTEBOX_NAVTYPE_1_LBL</option>
+            <option value="2">PLG_JOOMGALLERY_JOOMLYTEBOX_NAVTYPE_2_LBL</option>
+            <option value="3">PLG_JOOMGALLERY_JOOMLYTEBOX_NAVTYPE_3_LBL</option>
+          </field>
+      </fieldset>
+      <fieldset name="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDESHOW_PARAMETER_LBL" label="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDESHOW_PARAMETER_LBL">
+          <field name="cfg_slideinterval" class="validate-numeric" type="text" default="4000" label="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDEINTERVAL_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDEINTERVAL_DESC" required="true"/>
+          <field class="btn-group" name="cfg_slideloop" type="radio" default="1" label="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDELOOP_LBL" description="PLG_JOOMGALLERY_JOOMLYTEBOX_SLIDELOOP_DESC">
+            <option value="0">PLG_JOOMGALLERY_JOOMLYTEBOX_NO_LBL</option>
+            <option value="1">PLG_JOOMGALLERY_JOOMLYTEBOX_YES_LBL</option>
+          </field>    
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server type="collection" priority="1" name="JoomGallery Update Service">http://www.en.joomgallery.net/components/com_newversion/xml/extensions3.xml</server>
+  </updateservers>
+</extension>
