@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="plugin" group="joomgallery" version="3.0" method="upgrade">
 	<name>plg_joomgallery_joomlytebox</name>
-	<creationDate>12.04.2013</creationDate>
+	<creationDate>2019/04/12</creationDate>
 	<author>JoomGallery::Project Team</author>
-  <authorEmail>team@joomgallery.net</authorEmail>  
-	<authorUrl>www.joomgallery.net</authorUrl>
-	<copyright>(C) 2013 JoomGallery::Project Team</copyright>
+	<authorUrl>www.joomgalleryfriends.net</authorUrl>
+	<copyright>(C) 2013 - 2019 JoomGallery::Project Team</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
-	<version>3.0</version>
+	<version>3.0.1</version>
 	<description>PLG_JOOMGALLERY_JOOMLYTEBOX_DESC</description>
 	<files>
 		<filename plugin="joomlytebox">joomlytebox.php</filename>
@@ -70,6 +69,6 @@
     </fields>
   </config>
   <updateservers>
-    <server type="collection" priority="1" name="JoomGallery Update Service">http://www.en.joomgallery.net/components/com_newversion/xml/extensions3.xml</server>
+    <server type="collection" priority="1" name="JoomGallery Update Service">https://www.joomgalleryfriends.net/components/com_newversion/xml/extensions3.xml</server>
   </updateservers>
 </extension>
